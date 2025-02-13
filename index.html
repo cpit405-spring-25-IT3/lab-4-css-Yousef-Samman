@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <title>Lab 4</title>
 </head>
 
@@ -12,39 +12,48 @@
     <div class="container">
         <h2>Great Auto Parts - Order Form</h2>
         <form action="#" method="POST">
-            <label for="first-name">First Name:<sup >*</sup></label>
-            <input type="text" id="first-name" name="first_name" placeholder="Enter your first name" required>
-            <br><br>
-            <label for="last-name">Last Name:<sup >*</sup></label>
-            <input type="text" id="last-name" name="last_name" placeholder="Enter your last name" required>
-            <br><br>
-            <label for="email">Email:<sup >*</sup></label>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            
+            <label for="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-            <br><br>
-            <label for="phone">Phone number:<sup >*</sup></label>
+            
+            <label for="phone">Phone Number:</label>
             <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
-            <br><br>
-            <label for="make">Make:<sup >*</sup></label>
-            <input type="text" id="make" name="make" placeholder="Make" required>
-            <br><br>
-            <label for="model">Model:<sup >*</sup></label>
-            <input type="text" id="model" name="model" placeholder="Model" required>
-            <br><br>
-            <label for="year">Year:<sup >*</sup></label>
-            <input type="number" id="year" name="year" placeholder="Year" required>
-            <br><br>
-            <label for="date">Date:<sup >*</sup></label>
+            
+            <label for="make">Car Make:</label>
+            <select id="make" name="make" required>
+                <option value="">Select Make</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Honda">Honda</option>
+                <option value="Ford">Ford</option>
+                <option value="BMW">BMW</option>
+            </select>
+            
+            <label for="model">Car Model:</label>
+            <select id="model" name="model" required>
+                <option value="">Select Model</option>
+                <option value="Sedan">Sedan</option>
+                <option value="SUV">SUV</option>
+                <option value="Truck">Truck</option>
+                <option value="Coupe">Coupe</option>
+            </select>
+            
+            <label for="year">Year:</label>
+            <input type="number" id="year" name="year" placeholder="Year" min="1900" max="2025" required>
+            
+            <label for="date">Date:</label>
             <input type="date" id="date" name="date" required>
-            <br><br>
-            <label for="part">Spare Part:<sup >*</sup></label>
+            
+            <label for="part">Spare Part:</label>
             <input type="text" id="part" name="part" placeholder="Enter the spare part you need" required>
-            <br><br>
-            <label for="quantity">Quantity:<sup >*</sup></label>
-            <input type="number" id="quantity" name="quantity" placeholder="Enter the quantity of the spare part you need" required>
-            <br><br>
+            
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" min="1" max="100" required>
+            
             <label for="comment">Comment:</label>
-            <textarea id="comment" name="comment" placeholder="Enter your comment" rows="4"></textarea>
-            <br><br>
+            <textarea id="comment" name="comment" placeholder="Enter your comment" rows="4" cols="50"></textarea>
+            
             <button type="submit">Submit</button>
         </form>
     </div>
